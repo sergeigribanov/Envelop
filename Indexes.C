@@ -26,8 +26,9 @@ void Indexes(TString path, TString MultidimFitFile = "higgsCombineTest.MultiDimF
    
    for(int i=0;i<12;i++){
       TString st(((RooMultiPdf*)w_bias->pdf(Form("roomultipdf_cat%d",i)))->getPdf(ind[i])->GetName());     
-      cout<<st(st.Last('_')+1,st.Length()); // 1D case
-//      cout<<st(st.First('_')+1,9); // 2D case
+//      cout<<st(st.Last('_')+1,st.Length()); // 1D case
+      cout<<st(st.First('_')+1,9); // 2D case
+
       if(i<11) cout<<" , ";
    }
    cout<<endl;
@@ -45,8 +46,8 @@ void Indexes(TString path, TString MultidimFitFile = "higgsCombineTest.MultiDimF
 	 }	 
 	 else
 	   st = "none";
-	 cout<<"\""<<st(st.Last('_')+1,st.Length())<<"\""; // 1D 
-//	 cout<<"\""<<st(st.First('_')+1,9)<<"\""; // 2D 
+//	 cout<<"\""<<st(st.Last('_')+1,st.Length())<<"\""; // 1D 
+	 cout<<"\""<<st(st.First('_')+1,9)<<"\""; // 2D 
 	 if(j<MaxInd-1) cout<<" , ";
       }
       cout<<" }";

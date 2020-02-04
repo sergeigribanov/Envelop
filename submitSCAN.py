@@ -21,14 +21,8 @@ def prepareJob (i_job, basedir, outdir, name, datacard, all, cat, index):
     datacardPath +='/Node_SM/hhbbgg_13TeV_DataCard_envelope_cat'+str(cat)+'.txt'
 
     bestfit_ind_all = {
-    'new_1D_ttHon_ethbound':[0,0,2,1,0,0,1,3,2,3,3,2],
-    #'new_2D_ttHon0.21':[0,6,6,3,0,0,3,17,7,9,12,22],
-    #'Mjj_new_1D_ttHon0.21':[0,1,2,2,2,1,2,3,3,2,2,2],
-    #'new_ptmgg_ptmjj_dR_1D_ttHon_ethbound':[0,2,2,2,0,2,4,2,1,2,2,4],
-    #'new_ptmgg_ptmjj_dR_1D_ttHon':[0,2,2,1,1,2,3,1,1,2,2,2],
-    #'new_ptmgg_ptmjj_dR_2D_ttHon_mjj80':[2,7,6,6,1,6,9,9,4,6,3,12],
-    #'new_ptmgg_ptmjj_dR_2D_ttHon_newbound' :[0,6,6,0,0,6,6,17,6,3,6,22],
-    #'new_ptmgg_ptmjj_dR_2D_ttHon_newbound_mjj80':[0,6,6,0,0,6,6,17,6,3,6,22]
+    'ws_2016-17-18_ttHon0.26_2D_31012020':[2,7,6,2,3,8,9,13,6,3,12,9],
+    #'ws_2016-17-18_DeepJet_2D_ttHon_v2':[3,3,3,4,9,9,6,12,6,13,9,12],
     }
     
     
@@ -91,14 +85,8 @@ if __name__ == '__main__':
     queue = args.queue 
 
     max_ind_all = {
-    'new_1D_ttHon_ethbound':[3,3,3,3,3,3,3,4,3,4,4,5],
-    #'new_2D_ttHon0.21':[9,9,9,9,9,9,12,20,9,12,15,25],
-    #'Mjj_new_1D_ttHon0.21':[3,4,3,3,3,3,4,4,4,4,5,6],
-    #'new_ptmgg_ptmjj_dR_1D_ttHon_ethbound':[3,3,3,3,3,3,5,3,3,3,4,5],
-    #'new_ptmgg_ptmjj_dR_1D_ttHon':[3,3,3,3,3,3,4,3,3,3,4,5],
-    #'new_ptmgg_ptmjj_dR_2D_ttHon_mjj80':[9,9,9,12,9,9,12,12,9,9,12,15],
-    #'new_ptmgg_ptmjj_dR_2D_ttHon_newbound' :[9,9,9,9,9,9,12,20,12,9,12,25],
-    #'new_ptmgg_ptmjj_dR_2D_ttHon_newbound_mjj80':[9,9,9,9,9,9,12,12,12,9,12,15]
+    'ws_2016-17-18_ttHon0.26_2D_31012020':[9,9,9,9,9,9,12,15,9,9,15,18],
+    #'ws_2016-17-18_DeepJet_2D_ttHon_v2':[9,12,9,9,12,12,12,15,9,16,12,25],
     }
     
     #max_ind = [3,3,4,3,5,4,5,5,5,5,5,5]  # FIXME

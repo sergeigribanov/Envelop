@@ -1,11 +1,6 @@
-max_ind=(3 3 3 3 3 3 3 4 3 4 4 5);
+max_ind=(9 9 9 9 9 9 12 15 9 9 15 18);
 #max_ind=(3 3 3 3 3 3 4 3 3 3 4 5);
-ext=new_1D_ttHon_ethbound
-#ext=Mjj_new_1D_ttHon0.21
-#ext=new_ptmgg_ptmjj_dR_1D_ttHon_ethbound
-#ext=new_ptmgg_ptmjj_dR_1D_ttHon
-#ext=new_ptmgg_ptmjj_dR_2D_ttHon_mjj80
-#ext=new_ptmgg_ptmjj_dR_2D_ttHon_newbound
+ext=ws_2016-17-18_ttHon0.26_2D_31012020
 
 mkdir -p /eos/user/i/ivovtin/www/HHbbgg/envelope/${ext}
 cp /eos/user/i/ivovtin/www/tmp/index.php /eos/user/i/ivovtin/www/HHbbgg/envelope/${ext}

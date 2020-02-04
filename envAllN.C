@@ -208,19 +208,19 @@ void envAllN(TString ext,int cat, int N){
 
 */
 
-TString funcname[12][5]={
-{ "Ber1" , "Exp1" , "Pow1" , "none" , "none" } , 
-{ "Ber1" , "Exp1" , "Pow1" , "none" , "none" } , 
-{ "Ber1" , "Exp1" , "Pow1" , "none" , "none" } , 
-{ "Ber1" , "Exp1" , "Pow1" , "none" , "none" } , 
-{ "Ber1" , "Exp1" , "Pow1" , "none" , "none" } , 
-{ "Ber1" , "Exp1" , "Pow1" , "none" , "none" } , 
-{ "Ber1" , "Exp1" , "Pow1" , "none" , "none" } , 
-{ "Ber1" , "Ber2" , "Exp1" , "Pow1" , "none" } , 
-{ "Ber1" , "Exp1" , "Pow1" , "none" , "none" } , 
-{ "Ber1" , "Ber2" , "Exp1" , "Pow1" , "none" } , 
-{ "Ber1" , "Ber2" , "Exp1" , "Pow1" , "none" } , 
-{ "Ber1" , "Ber2" , "Ber3" , "Exp1" , "Pow1" }
+TString funcname[12][18]={
+{ "Ber1_Ber1" , "Ber1_Exp1" , "Ber1_Pow1" , "Exp1_Ber1" , "Exp1_Exp1" , "Exp1_Pow1" , "Pow1_Ber1" , "Pow1_Exp1" , "Pow1_Pow1" , "none" , "none" , "none" , "none" , "none" , "none" , "none" , "none" , "none" } , 
+{ "Ber1_Ber1" , "Ber1_Exp1" , "Ber1_Pow1" , "Exp1_Ber1" , "Exp1_Exp1" , "Exp1_Pow1" , "Pow1_Ber1" , "Pow1_Exp1" , "Pow1_Pow1" , "none" , "none" , "none" , "none" , "none" , "none" , "none" , "none" , "none" } , 
+{ "Ber1_Ber1" , "Ber1_Exp1" , "Ber1_Pow1" , "Exp1_Ber1" , "Exp1_Exp1" , "Exp1_Pow1" , "Pow1_Ber1" , "Pow1_Exp1" , "Pow1_Pow1" , "none" , "none" , "none" , "none" , "none" , "none" , "none" , "none" , "none" } , 
+{ "Ber1_Ber1" , "Ber1_Exp1" , "Ber1_Pow1" , "Exp1_Ber1" , "Exp1_Exp1" , "Exp1_Pow1" , "Pow1_Ber1" , "Pow1_Exp1" , "Pow1_Pow1" , "none" , "none" , "none" , "none" , "none" , "none" , "none" , "none" , "none" } , 
+{ "Ber1_Ber1" , "Ber1_Exp1" , "Ber1_Pow1" , "Exp1_Ber1" , "Exp1_Exp1" , "Exp1_Pow1" , "Pow1_Ber1" , "Pow1_Exp1" , "Pow1_Pow1" , "none" , "none" , "none" , "none" , "none" , "none" , "none" , "none" , "none" } , 
+{ "Ber1_Ber1" , "Ber1_Exp1" , "Ber1_Pow1" , "Exp1_Ber1" , "Exp1_Exp1" , "Exp1_Pow1" , "Pow1_Ber1" , "Pow1_Exp1" , "Pow1_Pow1" , "none" , "none" , "none" , "none" , "none" , "none" , "none" , "none" , "none" } , 
+{ "Ber1_Ber1" , "Ber1_Exp1" , "Ber1_Pow1" , "Ber2_Ber1" , "Ber2_Exp1" , "Ber2_Pow1" , "Exp1_Ber1" , "Exp1_Exp1" , "Exp1_Pow1" , "Pow1_Ber1" , "Pow1_Exp1" , "Pow1_Pow1" , "none" , "none" , "none" , "none" , "none" , "none" } , 
+{ "Ber1_Ber1" , "Ber1_Exp1" , "Ber1_Pow1" , "Ber2_Ber1" , "Ber2_Exp1" , "Ber2_Pow1" , "Ber3_Ber1" , "Ber3_Exp1" , "Ber3_Pow1" , "Exp1_Ber1" , "Exp1_Exp1" , "Exp1_Pow1" , "Pow1_Ber1" , "Pow1_Exp1" , "Pow1_Pow1" , "none" , "none" , "none" } , 
+{ "Ber1_Ber1" , "Ber1_Exp1" , "Ber1_Pow1" , "Exp1_Ber1" , "Exp1_Exp1" , "Exp1_Pow1" , "Pow1_Ber1" , "Pow1_Exp1" , "Pow1_Pow1" , "none" , "none" , "none" , "none" , "none" , "none" , "none" , "none" , "none" } , 
+{ "Ber1_Ber1" , "Ber1_Exp1" , "Ber1_Pow1" , "Exp1_Ber1" , "Exp1_Exp1" , "Exp1_Pow1" , "Pow1_Ber1" , "Pow1_Exp1" , "Pow1_Pow1" , "none" , "none" , "none" , "none" , "none" , "none" , "none" , "none" , "none" } , 
+{ "Ber1_Ber1" , "Ber1_Exp1" , "Ber1_Pow1" , "Ber2_Ber1" , "Ber2_Exp1" , "Ber2_Pow1" , "Ber3_Ber1" , "Ber3_Exp1" , "Ber3_Pow1" , "Exp1_Ber1" , "Exp1_Exp1" , "Exp1_Pow1" , "Pow1_Ber1" , "Pow1_Exp1" , "Pow1_Pow1" , "none" , "none" , "none" } , 
+{ "Ber1_Ber1" , "Ber1_Exp1" , "Ber1_Pow1" , "Ber2_Ber1" , "Ber2_Exp1" , "Ber2_Pow1" , "Ber3_Ber1" , "Ber3_Exp1" , "Ber3_Pow1" , "Ber4_Ber1" , "Ber4_Exp1" , "Ber4_Pow1" , "Exp1_Ber1" , "Exp1_Exp1" , "Exp1_Pow1" , "Pow1_Ber1" , "Pow1_Exp1" , "Pow1_Pow1" }
  };
 
    TMath::Sort(N,scorNLL,min_ind);
