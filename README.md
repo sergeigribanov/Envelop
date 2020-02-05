@@ -4,9 +4,9 @@ Use this code to get Expected Limits: https://github.com/ivovtin/bbggLimits2018/
 
 ## Getting the code
 Clone it locally:<br />
-'''
+```
 git clone https://github.com/[YOURNAME]/Envelop <br />
-'''
+```
 ## Using FTest
 
 CMSSW_8_1_0 release <br />
