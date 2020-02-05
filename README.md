@@ -1,6 +1,6 @@
 # FTest and functions for Envelop
 
-Use this code to get Expected Limits: https://github.com/ivovtin/bbggLimits2018/tree/run2_analysis package <br />
+Use this link to get Expected Limits package: https://github.com/ivovtin/bbggLimits2018/tree/run2_analysis  <br />
 
 ## Getting the code
 Clone it locally:<br />
@@ -13,7 +13,7 @@ CMSSW_8_1_0 release
 ```
 For FTest use this code: https://github.com/cms-analysis/flashggFinalFit/tree/topic-migrate-to-cmssw_747 <br />
 In this directory replace the file fTest.cpp from the directory: flashggFinalFit/Background/test/ to the the same file from: https://github.com/ivovtin/Envelop/blob/master/FTest/fTest.cpp <br /> 
-To comil the project go to flashggFinalFit/Background <br /> abd type
+To comil the project go to flashggFinalFit/Background <br /> and type
 ```
 make
 ```
@@ -25,25 +25,25 @@ make
 2) Check fit plots from FTest. Results of the FTest will be stored at fTestRes_${ext}.dat file. <br />
 4) While using bbggLimits2018 create a new workspace with orders received from the FTest. <br />
 
-## Reducing the number of functions at the Envelop -- important for 2D method
+## Reducing the number of functions at the Envelop (important for 2D method)
 
 ```
 CMSSW_10_2_13 release
 ```
-You this branch: https://github.com/ivovtin/HiggsAnalysis-CombinedLimit/tree/nckw_option_to_remove_const_offset from CombinedLimit <br />
-1) 
+Use this branch: https://github.com/ivovtin/HiggsAnalysis-CombinedLimit/tree/nckw_option_to_remove_const_offset from CombinedLimit <br />
+1) Type:
 ```
--- ./Indexes.sh ws_2016-17-18_ttHon0.26_2D_31012020
+./Indexes.sh ws_2016-17-18_ttHon0.26_2D_31012020
 ```
 Then find a combination of functions that gives a minimum of NLL, array of maximum index values, and the array of indices with a combination of functions for Asimov, etc. <br />
 2) Then rewrite all the results to submitSCAN.py and ScanStudy.C <br />
-3)Run scanning:
+3) Run scanning:
 ```
-runScan.sh
+./runScan.sh
 ```
-4) Then run ScanStudy.C to search for minimization <br />
+4) Then run ScanStudy.C to do for minimization <br />
 ```
--- root -l -b -q 'ScanStudy.C+("ws_2016-17-18_ttHon0.26_2D_31012020")'
+root -l -b -q 'ScanStudy.C+("ws_2016-17-18_ttHon0.26_2D_31012020")'
 ```
 5) Check the output of the program by using
 ```
