@@ -1,18 +1,17 @@
 # FTest and functions for Envelop
 
-For get Expected Limits we used https://github.com/ivovtin/bbggLimits2018/tree/run2_analysis package <br />
+Use this code to get Expected Limits: https://github.com/ivovtin/bbggLimits2018/tree/run2_analysis package <br />
 
 ## Getting the code
-Fork to your directory the code here: https://github.com/ivovtin/Envelop<br />
 Clone it locally:<br />
 git clone https://github.com/[YOURNAME]/Envelop <br />
 
-## FTest
+## Using FTest
 
 CMSSW_8_1_0 release <br />
-For FTest you must get next code: https://github.com/cms-analysis/flashggFinalFit/tree/topic-migrate-to-cmssw_747 <br />
-In this code need fTest.cpp file replace in directory flashggFinalFit/Background/test/ on https://github.com/ivovtin/Envelop/blob/master/FTest/fTest.cpp<br /> 
-Then done make in flashggFinalFit/Background <br />
+For FTest use this code: https://github.com/cms-analysis/flashggFinalFit/tree/topic-migrate-to-cmssw_747 <br />
+In this directory replace the file fTest.cpp from the directory: flashggFinalFit/Background/test/ to the the same file from: https://github.com/ivovtin/Envelop/blob/master/FTest/fTest.cpp<br /> 
+To comil the project type "make" in flashggFinalFit/Background <br />
 
 1) For run FTest you can use runFTest.sh . <br />
 2) Need see plots from FTest for check fits. Results from FTest in the end fTestRes_${ext}.dat file. <br />
