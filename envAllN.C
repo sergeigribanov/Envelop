@@ -135,8 +135,8 @@ void envAllN(TString ext,int cat, int N){
 	scorNLL[min_ind[j]]+=(TMath::Min(N,5)-j);
    }
 
-   TH2D *haxI = new TH2D("haxI",Form("Envelope study, category %d;;#Delta 2*NLL",cat),10,-1.2,4.2,10,-0.05*N,N*1.05);
-   haxI->SetTitle(";r;index         ");
+   TH2D *haxI = new TH2D("haxI","",10,-1.2,4.2,10,-0.05*N,N*1.05);
+   haxI->SetTitle(";#sigma(gg #rightarrow HH) #times BR(HH #rightarrow #gamma#gammab#bar{b}) [fb];index         ");
    haxI->SetMinimum(0.);
    haxI->SetMaximum((float)N+0.5);   
    haxI->GetYaxis()->SetNdivisions(4);
@@ -180,7 +180,7 @@ void envAllN(TString ext,int cat, int N){
    double max = grAll_max+0.7*(grAll_max-grAll_min);
 
    
-   TH2D *hax = new TH2D("hax",Form("NLL scan, category %d;;2 #Delta NLL",cat),10,-1.2,4.2,10,min,max);
+   TH2D *hax = new TH2D("hax",Form("Category %d;;-2 ln(L)",cat),10,-1.2,4.2,10,min,max);
    hax->GetXaxis()->SetLabelSize(0);
    hax->GetXaxis()->SetTickSize(0);   
 
@@ -228,7 +228,7 @@ TString funcname[12][18]={
    leg->SetBorderSize(0);
    leg->AddEntry(grall,"index is free","l");
    for(int j=0;j<TMath::Min(N,5);j++)
-     leg->AddEntry(gr[min_ind[j]],Form("ind=%d, ",min_ind[j])+funcname[cat][min_ind[j]],"l");
+     leg->AddEntry(gr[min_ind[j]],Form("index=%d, ",min_ind[j])+funcname[cat][min_ind[j]],"l");
 //   leg->AddEntry(gr0,"index = 0","l");
 //   leg->AddEntry(gr1,"index = 1","l");
 //   leg->AddEntry(gr2,"index = 2","l");
