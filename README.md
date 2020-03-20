@@ -18,10 +18,15 @@ To comil the project go to flashggFinalFit/Background <br /> and type
 make
 ```
 
-1) To run FTest use:
+1) To run FTest use (12 categories):
 ```
 ./runFTest.sh 
 ```
+To run FTest use (15 categories):
+```
+runFTest_cat15.sh
+```
+
 2) Check fit plots from FTest. Results of the FTest will be stored at fTestRes_${ext}.dat file. <br />
 4) While using bbggLimits2018 create a new workspace with orders received from the FTest. <br />
 
