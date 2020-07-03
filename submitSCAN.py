@@ -21,7 +21,7 @@ def prepareJob (i_job, basedir, outdir, name, datacard, all, cat, index):
     datacardPath +='/Node_SM/hhbbgg_13TeV_DataCard_envelope_cat'+str(cat)+'.txt'
 
     bestfit_ind_all = {
-    'ws_2016-17-18_ttHon0.26_2D_31012020':[2,7,6,2,3,8,9,13,6,3,12,9],
+    'ws_run2_ggHHNLO_MjjReg_KL36':[0,7,3,5,3,9,7,9,6,12,6,12,0,8],
     #'ws_2016-17-18_DeepJet_2D_ttHon_v2':[3,3,3,4,9,9,6,12,6,13,9,12],
     }
     
@@ -85,7 +85,7 @@ if __name__ == '__main__':
     queue = args.queue 
 
     max_ind_all = {
-    'ws_2016-17-18_ttHon0.26_2D_31012020':[9,9,9,9,9,9,12,15,9,9,15,18],
+    'ws_run2_ggHHNLO_MjjReg_KL36':[9,9,12,9,9,12,9,12,9,15,12,15,9,12],
     #'ws_2016-17-18_DeepJet_2D_ttHon_v2':[9,12,9,9,12,12,12,15,9,16,12,25],
     }
     
@@ -94,17 +94,20 @@ if __name__ == '__main__':
     print("max_ind",max_ind)
     ## create jobs
     #basedir = os.path.expandvars("$CMSSW_BASE")+'/src/HiggsAnalysis/bbggLimits2018'
-    basedir = os.path.expandvars("$CMSSW_BASE")+'/src/Envelop'
+    #basedir = os.path.expandvars("$CMSSW_BASE")+'/src/Envelop'
+    basedir = os.path.expandvars("$CMSSW_BASE")+'/src/Envelope_15cat'
 
     i_job=0
     all=0
-    for cat in range(0, 12):
+    for cat in range(0, 14):
+    #for cat in range(0, 16):
         for ind in range(0, max_ind[cat]):
             prepareJob( i_job, basedir, outdir, name, args.datacard, all, cat, ind)
             i_job+=1
     
     all=1            
-    for cat in range(0, 12):
+    for cat in range(0, 14):
+    #for cat in range(0, 16):
         prepareJob( i_job, basedir, outdir, name, args.datacard, all, cat, ind)
         i_job+=1
 
