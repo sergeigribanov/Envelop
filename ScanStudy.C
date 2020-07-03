@@ -58,7 +58,8 @@ TString funcname[14][15]={
    //int max_ind[16] = {9,9,12,9,9,12,12,12,12,15,12,15,12,9,9,9};  
 
    //for(int cat=0;cat<12;cat++){
-   for(int cat=0;cat<16;cat++){
+   //for(int cat=0;cat<16;cat++){
+   for(int cat=0;cat<14;cat++){
       cout<<"cat "<<cat<<": "<<endl;
       double nll[40][max_ind[cat]];
       int minind[40];
