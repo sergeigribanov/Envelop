@@ -13,18 +13,18 @@ CMSSW_8_1_0 release
 ```
 For FTest use this code: https://github.com/cms-analysis/flashggFinalFit/tree/topic-migrate-to-cmssw_747 <br />
 In this directory replace the file fTest.cpp from the directory: flashggFinalFit/Background/test/ to the the same file from: https://github.com/ivovtin/Envelop/blob/master/FTest/fTest.cpp <br /> 
-To comil the project go to flashggFinalFit/Background <br /> and type
+To compil the project go to flashggFinalFit/Background <br /> and type
 ```
 make
 ```
 
-1) To run FTest use (12 categories):
+1) To run FTest for ggHH analysis use (12 categories):
 ```
 ./runFTest.sh 
 ```
-To run FTest use (15 categories):
+To run FTest for VBFHH analysis use (14 categories):
 ```
-runFTest_cat15.sh
+./VBFHHcat_runFTest.sh
 ```
 
 2) Check fit plots from FTest. Results of the FTest will be stored at fTestRes_${ext}.dat file. <br />
