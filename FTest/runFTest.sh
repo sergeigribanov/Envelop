@@ -1,4 +1,5 @@
 #
+bbggLimits_DIT=/afs/cern.ch/user/s/segriban/test_Hggbb/CMSSW_8_1_0/src/HiggsAnalysis/bbggLimits2018
 for var in ws_run2_ttHon0.26_2D_SM_ggHHonly_04062020
 do
 ext=${var}_mgg
@@ -19,9 +20,10 @@ cp SERGEI_${ext}/*png ${eosdir}
 cp fTestRes_${ext}.dat ${eosdir}
 tail -n 48 fTestRes_${ext}.dat > fTestTmpRes_${ext}.dat
 cp /afs/cern.ch/user/s/segriban/test_Hggbb/www/tmp/index.php ${eosdir}
-done
 
-paste fTestTmpRes_${var}_mgg.dat fTestTmpRes_${var}_mjj.dat | ./parseDats.awk
+paste fTestTmpRes_${var}_mgg.dat fTestTmpRes_${var}_mjj.dat | ./parseDats.awk > ${bbggLimits_DIT}/jsonsForEnvelope/Env_json_${var}.dat
+echo ${bbggLimits_DIT}/jsonsForEnvelope/Env_json_${var}.dat
+done
 
 
 #for var in std_2D_ttHoff std_2D_ttHon
