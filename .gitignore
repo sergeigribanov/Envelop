@@ -1,0 +1,5 @@
+FTest/*.root
+FTest/*_mgg.dat
+FTest/*_mjj.dat
+FTest/*_mgg/
+FTest/*_mjj/
