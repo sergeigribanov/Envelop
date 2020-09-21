@@ -8,6 +8,7 @@ eosdir=/afs/cern.ch/user/s/segriban/test_Hggbb/www/HHbbgg/fTest/${ext}
 mkdir -p ${eosdir}
 cp SERGEI_${ext}/*png ${eosdir}
 cp fTestRes_${ext}.dat ${eosdir}
+tail -n 48 fTestRes_${ext}.dat > fTestTmpRes_${ext}.dat
 cp /afs/cern.ch/user/s/segriban/test_Hggbb/www/tmp/index.php ${eosdir}
 
 ext=${var}_mjj
@@ -16,8 +17,11 @@ eosdir=/afs/cern.ch/user/s/segriban/test_Hggbb/www/HHbbgg/fTest/${ext}
 mkdir -p ${eosdir}
 cp SERGEI_${ext}/*png ${eosdir}
 cp fTestRes_${ext}.dat ${eosdir}
+tail -n 48 fTestRes_${ext}.dat > fTestTmpRes_${ext}.dat
 cp /afs/cern.ch/user/s/segriban/test_Hggbb/www/tmp/index.php ${eosdir}
 done
+
+paste fTestTmpRes_${var}_mgg.dat fTestTmpRes_${var}_mjj.dat | ./parseDats.awk
 
 
 #for var in std_2D_ttHoff std_2D_ttHon
